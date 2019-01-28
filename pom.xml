@@ -6,11 +6,11 @@
     <parent>
         <groupId>com.zzz</groupId>
         <artifactId>maven-builder</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
     </parent>
 
     <artifactId>spring-builder</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
 
     <name>spring-builder</name>
