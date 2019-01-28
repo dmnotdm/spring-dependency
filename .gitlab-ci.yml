@@ -1,0 +1,35 @@
+stages:
+#  - init
+#  - test
+#  - build
+  - deploy
+
+#init:
+#  stage: init
+#  except:
+#    - master
+#  script:
+#    - export
+#    - echo 'hello runner~'
+#
+#test:
+#  stage: test
+#  except:
+#    - master
+#  script:
+#    - mvn -B -e test
+#
+#build:
+#  stage: build
+#  except:
+#    - master
+#  script:
+#    - mvn -B -e install -Dmaven.test.skip=true
+
+deploy:
+  stage: deploy
+  except:
+    - master
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?/
+  script:
+    - mvn -B -e deploy -Dmaven.test.skip=true
