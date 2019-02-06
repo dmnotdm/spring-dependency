@@ -37,10 +37,18 @@
     </build>
 
     <!-- @formatter:off -->
+    <dependencies>
+        <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId></dependency>
+    </dependencies>
+    <!-- @formatter:on -->
+
+    <!-- @formatter:off -->
     <dependencyManagement>
         <dependencies>
             <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-dependencies</artifactId><version>${springboot.version}</version><type>pom</type><scope>import</scope></dependency>
             <dependency><groupId>org.springframework.cloud</groupId><artifactId>spring-cloud-dependencies</artifactId><version>${springcloud.version}</version><type>pom</type><scope>import</scope></dependency>
+
+            <dependency><groupId>org.projectlombok</groupId><artifactId>lombok</artifactId><version>${lombok.version}</version></dependency>
         </dependencies>
     </dependencyManagement>
     <!-- @formatter:on -->
@@ -48,6 +56,7 @@
     <properties>
         <springboot.version>1.5.17.RELEASE</springboot.version>
         <springcloud.version>Edgware.RELEASE</springcloud.version>
+        <lombok.version>1.18.4</lombok.version>
 
         <mainClass>com.zzz.Main</mainClass>
     </properties>
